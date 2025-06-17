@@ -1,0 +1,61 @@
+Inventory Management Syetem API
+This is a complete in management api that manages the complete sells and purchase
+in a business.
+  The system has been design to be able to perform different CRUD transactions base on the privileges of the user.
+  
+  
+  RESOURCES
+  The program has been design using the following softwares
+  -: Intellij
+  -: postgresql
+  -: h2database
+  -: Ubuntu
+  HOW TO USE THE PROGRAM
+  To have acces to the endpoints of this application, the user has to
+  1-: Register(POST)
+  -: You will be require at least your firstName, username password to resiter.
+  -: When reistering go to Authorization header and put the Auth type to No Auth
+   -: http://localhost:8085/api/v1/register
+   -: Image 
+   <img src="images/logo.png" alt="Registration" width="200"/>
+   
+   2-: LOGIN(POST)
+   -: You will require your username and password that you use to register
+   -: Enter the username and password with the POST option and click send,
+   -: a TOKEN will be generated , this is the TOKEN that you will use to activate  
+   -: all the other end points.
+   -: http://localhost:8085/api/v1/login
+   -: Image
+   -: <img src="images/logo.png" alt="Login" width="200"/>
+   
+   3- ROLES(GET, POST)
+   -: Here you will have to attribute a particular role to a user.
+   -: every role has its attributes attaach to it, which defines what the user can 
+   -: do.
+   -i-: paste the token that was generated from the user login and select Bearer -
+   -:Token from the Authorization header and paste the token in the token field.
+   -: Use a GET method to view all the different Roles
+   -:GET: http://localhost:8085/api/v1/roles
+   -: Image
+   -: <img src="images/logo.png" alt="AllRoles" width="200"/>
+   ii- ASSIGN A ROLE TO A USER
+   -: After viewing all the roles, you can now asign a particular role to the user
+   -: using the role id and userid.
+   -:POST: http://localhost:8085/role/{roleid}/assign/user/{userid}
+   -: Image
+   -: <img src="images/logo.png" alt="Assign a role to a user" width="200"/>
+   
+   4 ACCESS OTHER ENPOINTS
+   -: Now that you have a role attributed, you can now have acces to all the other end points, base on the privilegs of the role.
+   -: Always paste the Token in the Token field in Auth Type Bearer Token which is in the Authorization header.
+   
+   -i: View all  Brand
+   -: http://localhost:8085/api/v1/brands
+   -: Image
+   -: <img src="images/logo.png" alt="view All Brand" width="200"/>
+   
+   
+   
+   
+   
+   
